@@ -1,0 +1,19 @@
+// Tech file for AEDT GDS import — Dual Stripline
+// Stackup: GND_BOT (0.1mm) / Dielectric (1.5mm, er=3.48) / GND_TOP (0.1mm)
+// Stripline centred in dielectric: z = 0.8 → 0.9 mm
+// Units are nm
+//
+// KLayout layer map:
+//   1/0  = GND_BOT       bottom ground plane
+//   2/0  = GND_TOP       top ground plane (with anti-pad clearances)
+//   3/0  = SL            embedded stripline traces (attacker, GND, victim)
+//   4/0  = PAD           surface signal pads on top copper layer
+//   1/1  = via1          outer via walls + transition vias (full stackup)
+//
+// Label        Color       Elv       Thk
+1               red         0         100000
+dielectric      blue        100000    1500000
+3               purple      800000    100000
+2               red         1600000   100000
+4               orange      1600000   100000
+via1            yellow      0         1700000
